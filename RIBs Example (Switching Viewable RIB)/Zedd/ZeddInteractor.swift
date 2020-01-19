@@ -1,37 +1,36 @@
 //
-//  RootInteractor.swift
-//  SceneDelegate + RIBs
+//  ZeddInteractor.swift
+//  RIBs Example (Switching Viewable RIB)
 //
-//  Created by Zedd on 2020/01/14.
+//  Created by Zedd on 2020/01/19.
 //  Copyright © 2020 Zedd. All rights reserved.
 //
 
 import RIBs
 import RxSwift
 
-protocol RootRouting: ViewableRouting {
+protocol ZeddRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToZedd()
-    func routeToWalker()
 }
 
-protocol RootPresentable: Presentable {
-    var listener: RootPresentableListener? { get set }
+protocol ZeddPresentable: Presentable {
+    var listener: ZeddPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol RootListener: class {
+protocol ZeddListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didMoveToWalker()
 }
 
-final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
+final class ZeddInteractor: PresentableInteractor<ZeddPresentable>, ZeddInteractable, ZeddPresentableListener {
 
-    weak var router: RootRouting?
-    weak var listener: RootListener?
+    weak var router: ZeddRouting?
+    weak var listener: ZeddListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: RootPresentable) {
+    override init(presenter: ZeddPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -46,11 +45,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
-    func didMoveToZedd() {
-        self.router?.routeToZedd()
-    }
-    
-    func didMoveToWalker() {
-        self.router?.routeToWalker()
-    }
+    func moveToWalker() {
+        self.listener?.didMoveToWalker()
+     }
 }

@@ -1,37 +1,36 @@
 //
-//  RootInteractor.swift
-//  SceneDelegate + RIBs
+//  WalkerInteractor.swift
+//  RIBs Example (Switching Viewable RIB)
 //
-//  Created by Zedd on 2020/01/14.
+//  Created by Zedd on 2020/01/19.
 //  Copyright © 2020 Zedd. All rights reserved.
 //
 
 import RIBs
 import RxSwift
 
-protocol RootRouting: ViewableRouting {
+protocol WalkerRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToZedd()
-    func routeToWalker()
 }
 
-protocol RootPresentable: Presentable {
-    var listener: RootPresentableListener? { get set }
+protocol WalkerPresentable: Presentable {
+    var listener: WalkerPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol RootListener: class {
+protocol WalkerListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didMoveToZedd()
 }
 
-final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
-
-    weak var router: RootRouting?
-    weak var listener: RootListener?
+final class WalkerInteractor: PresentableInteractor<WalkerPresentable>, WalkerInteractable, WalkerPresentableListener {
+    
+    weak var router: WalkerRouting?
+    weak var listener: WalkerListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: RootPresentable) {
+    override init(presenter: WalkerPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -46,11 +45,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
-    func didMoveToZedd() {
-        self.router?.routeToZedd()
-    }
-    
-    func didMoveToWalker() {
-        self.router?.routeToWalker()
+    func moveToZedd() {
+        self.listener?.didMoveToZedd()
     }
 }

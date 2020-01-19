@@ -17,12 +17,20 @@ protocol RootPresentableListener: class {
 }
 
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
-
+    
     weak var listener: RootPresentableListener?
     
     override func viewDidLoad() {
-         super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.white
-     }
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.systemYellow
+    }
+    
+    func present(viewController: ViewControllable) {
+        self.present(viewController.uiviewController, animated: true, completion: nil)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        viewController.uiviewController.dismiss(animated: true, completion: nil)
+    }
 }
