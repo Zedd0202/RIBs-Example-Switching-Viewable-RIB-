@@ -1,0 +1,6 @@
+framework module Pods_RIBs_Example__Switching_Viewable_RIB_ {
+  umbrella header "Pods-RIBs Example (Switching Viewable RIB)-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		14C7088A23D43B1A00155C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C7088823D43B1A00155C18 /* Main.storyboard */; };
 		14C7088C23D43B1D00155C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C7088B23D43B1D00155C18 /* Assets.xcassets */; };
 		14C7088F23D43B1D00155C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C7088D23D43B1D00155C18 /* LaunchScreen.storyboard */; };
+		14C7089B23D43C1900155C18 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7089723D43C1900155C18 /* RootViewController.swift */; };
+		14C7089C23D43C1900155C18 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7089823D43C1900155C18 /* RootInteractor.swift */; };
+		14C7089D23D43C1900155C18 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7089923D43C1900155C18 /* RootBuilder.swift */; };
+		14C7089E23D43C1900155C18 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7089A23D43C1900155C18 /* RootRouter.swift */; };
+		9F67DBFFDF4478B23C67A232 /* Pods_RIBs_Example__Switching_Viewable_RIB_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CC579E5E17B760D3AF8455 /* Pods_RIBs_Example__Switching_Viewable_RIB_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		14C7088B23D43B1D00155C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C7088E23D43B1D00155C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14C7089023D43B1D00155C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14C7089723D43C1900155C18 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		14C7089823D43C1900155C18 /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		14C7089923D43C1900155C18 /* RootBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		14C7089A23D43C1900155C18 /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		50CC579E5E17B760D3AF8455 /* Pods_RIBs_Example__Switching_Viewable_RIB_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBs_Example__Switching_Viewable_RIB_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1402AF029A72023E21A8E20 /* Pods-RIBs Example (Switching Viewable RIB).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBs Example (Switching Viewable RIB).debug.xcconfig"; path = "Target Support Files/Pods-RIBs Example (Switching Viewable RIB)/Pods-RIBs Example (Switching Viewable RIB).debug.xcconfig"; sourceTree = "<group>"; };
+		F9B12DAF167402EBC908EDDB /* Pods-RIBs Example (Switching Viewable RIB).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBs Example (Switching Viewable RIB).release.xcconfig"; path = "Target Support Files/Pods-RIBs Example (Switching Viewable RIB)/Pods-RIBs Example (Switching Viewable RIB).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F67DBFFDF4478B23C67A232 /* Pods_RIBs_Example__Switching_Viewable_RIB_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				14C7088123D43B1A00155C18 /* RIBs Example (Switching Viewable RIB) */,
 				14C7088023D43B1A00155C18 /* Products */,
+				99317A24786BD97B6059F2A5 /* Pods */,
+				FC90645356D4F82880FB13FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +71,7 @@
 		14C7088123D43B1A00155C18 /* RIBs Example (Switching Viewable RIB) */ = {
 			isa = PBXGroup;
 			children = (
+				14C7089623D43B7D00155C18 /* Root */,
 				14C7088223D43B1A00155C18 /* AppDelegate.swift */,
 				14C7088423D43B1A00155C18 /* SceneDelegate.swift */,
 				14C7088623D43B1A00155C18 /* ViewController.swift */,
@@ -67,6 +83,34 @@
 			path = "RIBs Example (Switching Viewable RIB)";
 			sourceTree = "<group>";
 		};
+		14C7089623D43B7D00155C18 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				14C7089923D43C1900155C18 /* RootBuilder.swift */,
+				14C7089823D43C1900155C18 /* RootInteractor.swift */,
+				14C7089A23D43C1900155C18 /* RootRouter.swift */,
+				14C7089723D43C1900155C18 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		99317A24786BD97B6059F2A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1402AF029A72023E21A8E20 /* Pods-RIBs Example (Switching Viewable RIB).debug.xcconfig */,
+				F9B12DAF167402EBC908EDDB /* Pods-RIBs Example (Switching Viewable RIB).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC90645356D4F82880FB13FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50CC579E5E17B760D3AF8455 /* Pods_RIBs_Example__Switching_Viewable_RIB_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14C7089323D43B1D00155C18 /* Build configuration list for PBXNativeTarget "RIBs Example (Switching Viewable RIB)" */;
 			buildPhases = (
+				DB7FD8F513AC3FCAEBC81F7F /* [CP] Check Pods Manifest.lock */,
 				14C7087B23D43B1A00155C18 /* Sources */,
 				14C7087C23D43B1A00155C18 /* Frameworks */,
 				14C7087D23D43B1A00155C18 /* Resources */,
+				9A41F4AB31ADF771A6BE2F1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +179,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A41F4AB31ADF771A6BE2F1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIBs Example (Switching Viewable RIB)/Pods-RIBs Example (Switching Viewable RIB)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIBs Example (Switching Viewable RIB)/Pods-RIBs Example (Switching Viewable RIB)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RIBs Example (Switching Viewable RIB)/Pods-RIBs Example (Switching Viewable RIB)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB7FD8F513AC3FCAEBC81F7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RIBs Example (Switching Viewable RIB)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14C7087B23D43B1A00155C18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +228,11 @@
 			files = (
 				14C7088723D43B1A00155C18 /* ViewController.swift in Sources */,
 				14C7088323D43B1A00155C18 /* AppDelegate.swift in Sources */,
+				14C7089B23D43C1900155C18 /* RootViewController.swift in Sources */,
 				14C7088523D43B1A00155C18 /* SceneDelegate.swift in Sources */,
+				14C7089E23D43C1900155C18 /* RootRouter.swift in Sources */,
+				14C7089C23D43C1900155C18 /* RootInteractor.swift in Sources */,
+				14C7089D23D43C1900155C18 /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +374,7 @@
 		};
 		14C7089423D43B1D00155C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1402AF029A72023E21A8E20 /* Pods-RIBs Example (Switching Viewable RIB).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +392,7 @@
 		};
 		14C7089523D43B1D00155C18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9B12DAF167402EBC908EDDB /* Pods-RIBs Example (Switching Viewable RIB).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
